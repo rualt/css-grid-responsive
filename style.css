@@ -16,13 +16,14 @@ body {
     'content content content content side'
     'footer footer footer footer footer';
     justify-content: center;
-    height: 100%;
+    background-color: whitesmoke;
 } 
 
 .header {
     grid-area: header;
-    background-color: #f1f1f1;
+    background-color: whitesmoke;
     padding: 20px 10px;
+    min-height: 10%;
 }
 
 .header a {
@@ -134,12 +135,13 @@ body {
 .content,
 .side {
   padding: 10px;
+  min-height: 80vh;
 }
 
 .footer {
   grid-area: footer;
   background-color: whitesmoke;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -200,6 +202,6 @@ input[type=text], select, textarea {
   /* Add a background color and some padding around the form */
   .container {
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color:whitesmoke;
     padding: 20px;
   }
