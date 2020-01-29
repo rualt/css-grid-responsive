@@ -1,4 +1,21 @@
 This is repository for training css-grid 
 
-image sourse:
-[pixabay](https://pixabay.com/ru/illustrations/%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD-%D1%80%D0%BE%D0%B7%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9-%D1%81%D0%BB%D0%B0%D0%B4%D0%BA%D0%B8%D0%B9-%D0%BC%D0%B5%D1%85-1477380/)
+###Description
+
+Adaptive in HTML and CSS:
+    • header (logo and at least three links (menu))
+    • main part
+    • side column - picture and a slogan of the company,name and contacts
+    • footer - pages (menus), copyright
+
+A site must have a minimum of three pages:
+    • page about us (text)
+    • page form (name, mail, subject, message, send button)
+    • page our team (pictures + name surname + position)
+
+Images are displayed in 1, 2 or 3 columns, depending on the screen resolution.
+On the mobile version the menu in 1 column.
+
+
+picture side-column source:
+[Pink Cat Paws Cute Bookmark](https://www.canva.com/)
