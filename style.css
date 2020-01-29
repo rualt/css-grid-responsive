@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vh;
 }
 
 
@@ -75,34 +76,17 @@ body {
 .container {
     padding: 0 16px;
 }
-  
-/* Clear floats */
+
+.title {
+    color: grey;
+}
+
 .container::after, .row::after {
     content: "";
     clear: both;
     display: table;
 }
 
-.title {
-    color: grey;
-}
-  
-.button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-}
-  
-.button:hover {
-    background-color: #555;
-}
-  
 .side {
     grid-area: side;
 }
@@ -143,14 +127,36 @@ body {
   text-align: center;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
 
     .grid-container  {
+        grid-template-columns: repeat(4, minmax(auto, 230px));
         grid-template-areas: 
-            'header header header' 
+            'header header header header' 
+            'content content content side'
+            'footer footer footer footer';
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    .container::after, .row::after {
+        content: "";
+        clear: both;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .grid-container  {
+        grid-template-columns: repeat(3, minmax(auto, 230px));
+        grid-template-areas: 
+            'header header header ' 
             'content content content'
             'side side side'
-            'footer footer footer';
+            'footer footer footer ';
     }
 
     .column {
@@ -170,16 +176,15 @@ body {
 }
 
 
-
 input[type=text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical 
   }
   
   /* Style the submit button with a specific background color etc */
@@ -198,7 +203,7 @@ input[type=text], select, textarea {
   }
   
   /* Add a background color and some padding around the form */
-  .container {
+  .form-container {
     border-radius: 5px;
     padding: 20px;
   }
